@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ZbApi</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="pull-right" id="reviewtools">
+		<button id="add-marker">add</button>
+	</div>
+	<span></span>
+</div>
+<script>
+	$('#add-marker').click(function(){
+    $('.container').click(function(event){ 
+    	var x = event.pageX;
+    	var y = event.pageY;
+    	var marker = $("<i class='fas fa-map-marker-alt'></i>");
+    	var annotation = $("<div class='annotation'><textarea></textarea><br><button>Save</button><button>Cancel</button></div>");
+    	$('.container').append(marker);
+    	$('.container').append(annotation);
+    	$('.fas').offset({top:y, left:x});
+    	$('.annotation').offset({top:y+30, left:x-60});
+    	
+    });
+});
+</script>
+</body>
+</html>

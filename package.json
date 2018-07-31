@@ -1,0 +1,23 @@
+{
+    "name": "ZbAPI",
+    "version": "1.0.0",
+    "keywords": [
+        "util",
+        "functional",
+        "server",
+        "client",
+        "browser"
+    ],
+    "author": "Anmol",
+    "contributors": [],
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "mongoose": "^5.2.5",
+        "morgan": "^1.9.0",
+        "nodemon": "^1.18.3",
+        "random-token": "0.0.8"
+    },
+    "devDependencies": {
+        "express": "^4.16.3"
+    }
+}
